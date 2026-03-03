@@ -1,0 +1,48 @@
+#proyectos {
+    h2 {
+        text-align: center;
+    }
+
+    .card-holder {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+
+        .card {
+            background-color: @secondary-background-color;
+
+            @media(min-width: 720px){
+                width: 200px;
+            }
+            
+
+            margin: 0px auto 1rem auto;
+            border: 1px solid #eee;
+            overflow: hidden;
+            border-radius: 7px;
+            text-align: center;
+
+            .card-header {
+                img {
+                    display: block;
+                    padding: 0px;
+                    margin: 0px;
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                }
+            }
+
+            .card-content {
+                padding-bottom: 0.5rem;
+                border-bottom: 1px #ccc solid;
+                margin-bottom: 0.5rem;
+            }
+
+            .card-footer {
+                padding: 0.5rem;
+                padding-bottom: 1rem;
+            }
+        }
+    }
+}

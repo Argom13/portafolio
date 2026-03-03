@@ -1,5 +1,5 @@
-.generateColumns(@prefix, @columnas, @iteracion : 1)
-    when (@iteracion =< @columnas)
+.generarColumns(@prefix, @columnas, @iteracion : 1)
+    when(@iteracion =< @columnas)
 {
     @selector: ~'.col-@{prefix}@{iteracion}';
     @ancho: (100% / @columnas * @iteracion);
@@ -9,34 +9,30 @@
     @{selector} {
         flex-basis: @ancho;
     }
-
     @{offset} {
         margin-left: @ancho;
     }
 
-    .generateColumns(@prefix, @columnas, @iteracion + 1); 
+    .generarColumns(@prefix, @columnas, (@iteracion + 1))
 }
 
-
-.grid-container{
-    .row{
+.grid-container {
+    .row {
         display: flex;
         flex-wrap: wrap;
-        [class *= col-]{
-            flex: 0,0;
-            border: 1px solid darken(@primary-text-color, 30%);
+        [class*='col-'] {
+            flex:0,0;
+            
         }
-
-        .generateColumns('sn-', 12);
-        @media (min-width: 720px){
-            .generateColumns('md-', 12);
+        .generarColumns('', 12);
+        @media (min-width:720px){
+            .generarColumns('md-', 12);
         }
-        @media (min-width: 1025px){
-            .generateColumns('lg-', 12);
+        @media (min-width:1025px){
+            .generarColumns('lg-', 12);
         }
-        @media (min-width: 1300px){
-            .generateColumns('g-', 12);
+        @media (min-width:1300px){
+            .generarColumns('xl-', 12);
         }
     }
-
 }

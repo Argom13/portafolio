@@ -1,16 +1,18 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="styles/main.less"/>
+    <link rel="stylesheet" href="styles/main.less" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>portafolio</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <header>
         <h1>Mi Portafolio</h1>
         <nav>
@@ -30,74 +32,98 @@
                 <p>Soy Técnico Profesional en Informática, graduado del Instituto
                     No Gubernamental Nuevo Milenio, en donde descubrí en qué área
                     quería profesionalizarme. </p>
-                <a href="#contacto"><button type="button">Contáctame</button></a>
+                <a href="#contacto"><button class="buttons" type="button">Contáctame</button></a>
             </div>
             <div class="hero-right">
                 <picture>
-                    <source srcset="imagenes/foto_perfil.jpg" media="(min-width: 1024px)">
-                    <source srcset="imagenes/foto_perfil.jpg" media="(min-width: 720px)">
-                    <img src="imagenes/foto_perfil.jpg" alt="Foto de Perfil">
+                    <source srcset="assets/foto_perfil.jpg" media="(min-width: 1024px)">
+                    <source srcset="assets/foto_perfil.jpg" media="(min-width: 720px)">
+                    <img src="assets/foto_perfil.jpg" alt="Foto de Perfil">
                 </picture>
             </div>
         </section>
 
-        <section id="proyectos">
+        <section id="proyectos" class="grid-container">
             <h2>Proyectos</h2>
-            <div class="slideshow">
-                <div class="slideshow-track">
-                    <div class="slideshow-item">
-                        <div class="tarjeta-imagen">
-                            <img src="imagenes/sistema_hospital.jpg" alt="Sistema para Hospital">
+
+            <div class="card-holder">
+                <div class="row">
+
+                    <div class="card col-md-6 col-lg-3">
+                        <div class="card-header">
                             <h2>Sistema para Hospital</h2>
-                            <p>El funcionamiento principal de este sistema era crear citas para los pacientes</p>
+                            <div class="card-content">
+                                <img src="assets/sistema_hospital.jpg" alt="Sistema para Hospital">
+                            </div>
+                            <div class="card-footer">
+                                <p>El funcionamiento principal de este sistema era crear citas para los pacientes</p>
+                            </div>
                         </div>
                     </div>
+            
 
-                    <div class="slideshow-item">
-                        <div class="tarjeta-imagen">
-                            <img src="imagenes/sistema-floristeria.jpg" alt="Sistema para Floristería">
+                
+
+                    <div class="card col-md-6 col-lg-3">
+                        <div class="card-header">
                             <h2>Sistema para Floristería</h2>
-                            <p>Este sistema consistía en la administración de inventario de la empresa</p>
+                            <div class="card-content">
+                                <img src="assets/sistema-floristeria.jpg" alt="Sistema para Hospital">
+                            </div>
+                            <div class="card-footer">
+                                <p>Este sistema consistía en la administración de inventario de la empresa</p>
+                            </div>
+                        </div>
+                    </div>
+              
+
+           
+
+                    <div class="card col-md-6 col-lg-3">
+                        <div class="card-header">
+                            <h2>Sistema para Hospital</h2>
+                            <div class="card-content">
+                                <img src="assets/interact-webpagejpg.jpg" alt="Sistema para Hospital">
+                            </div>
+                            <div class="card-footer">
+                                <p>Esta página web tenia el objetivo de brindar información de la empresa</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="slideshow-item">
-                        <div class="tarjeta-imagen">
-                            <img src="imagenes/interact-webpagejpg.jpg" alt="Página Web para Interact Tegucigalpa Sur">
-                            <h2>Página Web para Interact Tegucigalpa Sur</h2>
-                            <p>Esta página web tenia el objetivo de brindar información de la empresa</p>
-                        </div>
-                    </div>
                 </div>
+            </div>
         </section>
 
         <section id="contacto">
-            <form action="" method="get">
-                <div class="field">
-                    <label for="txtNombre">Nombre Completo</label>
-                    <input type="text" placeholder="Nombre Completo" name="txtNombre" id="txtNombre">
-                </div>
+            <div class="action">
+                <form action="" method="get">
+                    <div class="field">
+                        <label for="txtNombre">Nombre Completo</label>
+                        <input type="text" placeholder="Nombre Completo" name="txtNombre" id="txtNombre">
+                    </div>
 
-                <div class="field">
-                    <label for="txtEmail">Correo Electrónico</label>
-                    <input type="email" placeholder="ejemplo@hola.com" name="txtEmail" id="txtEmail">
-                </div>
+                    <div class="field">
+                        <label for="txtEmail">Correo Electrónico</label>
+                        <input type="email" placeholder="ejemplo@hola.com" name="txtEmail" id="txtEmail">
+                    </div>
 
-                <div class="field">
-                    <label for="txtMensaje">Mensaje</label>
-                    <textarea name="txtMensaje" id="txtMensaje" placeholder="Escribe tu mensaje aquí..."></textarea>
-                </div>
+                    <div class="field">
+                        <label for="txtMensaje">Mensaje</label>
+                        <textarea name="txtMensaje" id="txtMensaje" placeholder="Escribe tu mensaje aquí..."></textarea>
+                    </div>
 
-                <div class="field-action">
-                    <button type="submit" name="btnEnviar" id="btnEnviar">Enviar</button>
-                </div>
-            </form>
+                    <button class="buttons" type="submit" name="btnEnviar" id="btnEnviar">Enviar</button>
+
+                </form>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>Todos los derechos reservados</p>
     </footer>
-    
-  </body>
+
+</body>
+
 </html>
